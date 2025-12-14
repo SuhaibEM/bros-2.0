@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Suhaib Imbirika — Web & App Developer | Designer</title>
+
+  <!-- Google font (optional) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Top alert (dismissible) -->
+  <div id="top-alert" class="alert" role="status" aria-live="polite">
+    <div class="alert-content">
+      <strong>Welcome!</strong> I’m Suhaib — Web & App Developer and Designer. Scroll or click the contact button to reach out.
+    </div>
+    <button class="alert-close" id="alert-close" aria-label="Close alert">&times;</button>
+  </div>
+
+  <header class="header">
+    <div class="container header-inner">
+      <div class="brand">
+        <h1>Suhaib <span>Imbirika</span></h1>
+        <p class="tag">Web & App Developer — Designer</p>
+      </div>
+
+      <nav class="nav">
+        <a href="#services">Services</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact" class="btn-outline">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h2>Creating beautiful web & mobile experiences</h2>
+          <p>I build responsive websites and mobile apps with elegant UI and clean code.</p>
+          <div class="hero-actions">
+            <a href="#services" class="btn-primary">My Services</a>
+            <a href="#contact" class="btn-secondary">Get in touch</a>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="stats">
+            <div class="stat">
+              <div class="num">2+</div>
+              <div class="label">Years Experience</div>
+            </div>
+            <div class="stat">
+              <div class="num">10+</div>
+              <div class="label">Projects</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="services container">
+      <h3>Services</h3>
+      <div class="cards">
+        <article class="card">
+          <h4>Web Development</h4>
+          <p>Responsive websites, performance-focused, modern JS and semantic HTML/CSS.</p>
+        </article>
+
+        <article class="card">
+          <h4>App Development</h4>
+          <p>Cross-platform mobile apps with smooth UX and stable architecture.</p>
+        </article>
+
+        <article class="card">
+          <h4>UI / UX Design</h4>
+          <p>Designs that convert: prototypes, wireframes, and polished visual interfaces.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="portfolio" class="container portfolio">
+      <h3>Portfolio (samples)</h3>
+      <div class="portfolio-grid">
+        <a href="https://jrapa-company.ly/" class="portfolio-item">Project A</a>
+        <a href="https://panoramaly.com/" class="portfolio-item">Project A</a>
+        <a href="https://aljirat-alealamia.ly/" class="portfolio-item">Project A</a>
+
+      </div>
+    </section>
+
+    <section id="contact" class="container contact">
+      <h3>Contact</h3>
+      <p>If you'd like to work together, send a message.</p>
+
+      <form id="contact-form" class="contact-form" onsubmit="handleContact(event)">
+        <label>
+          <span>Name</span>
+          <input type="text" name="name" required />
+        </label>
+
+        <label>
+          <span>Email</span>
+          <input type="email" name="email" required />
+        </label>
+
+        <label>
+          <span>Message</span>
+          <textarea name="message" rows="4" required></textarea>
+        </label>
+
+        <div class="form-actions">
+          <button type="submit" class="btn-primary">Send Message</button>
+          <button type="button" class="btn-outline" onclick="showTemporaryAlert('Thanks! Your message was captured (demo).')">Demo Alert</button>
+        </div>
+
+        <p class="small-note">* This form is demo-only. Hook to your backend or email service.</p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year"></span> Suhaib Imbirika — Web & App Developer</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
